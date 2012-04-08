@@ -1,6 +1,6 @@
 <pre>
 <?php
-require 'php/NumberParser';
+require 'php/NumberParser.php';
 
 $p = new NumberParser();
 if($_POST['numbers'] != null) {
