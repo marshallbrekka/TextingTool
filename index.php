@@ -13,7 +13,7 @@ if($_POST['numbers'] != null) {
 ?>
 </pre>
 <form>
-    <textarea name="numbers" />
+    <textarea name="numbers"></textarea>
     <input type="submit"/>
     
 </form>
