@@ -7,7 +7,6 @@ class NumberParser {
         'myboostmobile.com',
         'messaging.sprintpcs.com',
         'tmomail.net',
-        'email.uscc.net',
         'vtext.com',
         'vmobl.com'
     );
