@@ -12,7 +12,7 @@ class Mail {
 		$email_from = $from;
 		
 		$email_subject = ""; 
-		$email_txt = "";  
+ 
 
 		$email_to = $to;
 
@@ -22,7 +22,7 @@ class Mail {
 
 		
 	
-		return @mail($email_to, $email_subject, $message, $headers, "-f$email_from");
+		return mail($email_to, $email_subject, $message, $headers, "-f$email_from");
 		
 	}
 	
