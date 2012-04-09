@@ -26,8 +26,8 @@ if($_POST['numbers'] != null) {
 ?>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <form method="post">
-    <label>Email to send from (ex: KleinLieuForASUCSenate@gmail.com)</label>
-    <input type="text" name="from" />
+    <label>Email to send from (ex: KleinLieuForASUCSenate@gmail.com)</label><br/>
+    <input type="text" name="from" /><br/>
     <label>Phone Numbers (each one on a new line, it works to just copy a column from google docs)</label><br/>
     <textarea name="numbers" rows="5"></textarea><br/>
     <label>Message (160 characters) Include <b>www.bit.ly/asuc2012</b> in the message for a trackable link to the asuc elections page</label><br/>
