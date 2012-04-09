@@ -66,7 +66,7 @@ var whenkeydown = function(max_length)
             else
             {
                 //style numbers in red
-                $("p span").html("").html(chars_left).css("color", "#FF0000");
+                $("#message").val(text.substr(0, max_length));
             }
         }
     });
