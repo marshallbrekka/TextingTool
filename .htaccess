@@ -1,6 +1,6 @@
-AuthUserFile /home2/infallib/public_html/textbooks4change/resources/media/status/.htpasswd
+AuthUserFile /home/mbrekka/webapps/marshall_dev/calserve/.htpasswd
 AuthGroupFile /dev/null
-AuthName Username:log&Password:data
+AuthName 
 AuthType Basic
 
-require user log
+require user calserve
