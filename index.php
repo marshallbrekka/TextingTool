@@ -8,7 +8,7 @@ if($_POST['numbers'] != null) {
     $emails = $p->buildEmails($_POST['numbers']);
     if(count($emails) > 0) {
         $singleEmail = join(',', $emails);
-        $from = $_REQUEST['from'];
+        $from = /*$_REQUEST['from']*/ 'KleinLieuForASUCSenate@gmail.com';
         echo '<pre>' . $singleEmail . '</pre>';
         $mail = new Mail();
         if($mail->sendMail($from, $singleEmail, $_REQUEST['message'])) {
