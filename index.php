@@ -8,19 +8,14 @@ if($_POST['numbers'] != null) {
     $emails = $p->buildEmails($_POST['numbers']);
     if(count($emails) > 0) {
         $singleEmail = join(',', $emails);
-        $from = /*$_REQUEST['from'] 'KleinLieuForASUCSenate@gmail.com'*/ 'marshallsmedia@gmail.com';
-        echo '<pre>' . $from . '</pre>';
+        $from = "KleinLieuForASUCSenate@gmail.com";
         $mail = new Mail();
-        if($mail->sendMail($from, $singleEmail, $_REQUEST['message'])) {
-            echo '<p>Messages Sent</p>';
-        } else {
-            echo '<p>Failed for some unknown reason</p>';
-        }
+        $mail->sendMail($from, $singleEmail, $_REQUEST['message']);
         /*
         foreach($emails as $email) {
             
         }*/
-    
+    echo '<p>Messages Sent</p>';
     }
     
 }
@@ -31,8 +26,6 @@ if($_POST['numbers'] != null) {
 ?>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <form method="post">
-    <label>Email to send from (ex: KleinLieuForASUCSenate@gmail.com)</label><br/>
-    <input type="text" name="from" /><br/>
     <label>Phone Numbers (each one on a new line, it works to just copy a column from google docs)</label><br/>
     <textarea name="numbers" rows="5"></textarea><br/>
     <label>Message (160 characters) Include <b>www.bit.ly/asuc2012</b> in the message for a trackable link to the asuc elections page</label><br/>
