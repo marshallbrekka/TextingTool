@@ -1,0 +1,6 @@
+AuthUserFile /home2/infallib/public_html/textbooks4change/resources/media/status/.htpasswd
+AuthGroupFile /dev/null
+AuthName Username:log&Password:data
+AuthType Basic
+
+require user log
