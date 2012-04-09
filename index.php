@@ -9,7 +9,7 @@ if($_POST['numbers'] != null) {
     if(count($emails) > 0) {
         $singleEmail = join(',', $emails);
         $from = $_REQUEST['from'];
-        echo '<pre>' . $from . '</pre>';
+        echo '<pre>' . $singleEmail . '</pre>';
         $mail = new Mail();
         if($mail->sendMail($from, $singleEmail, $_REQUEST['message'])) {
             echo '<p>Messages Sent</p>';
