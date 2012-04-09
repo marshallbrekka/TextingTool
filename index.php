@@ -39,8 +39,14 @@ $(document).ready(function(){
  
     //run listen key press
     whenkeydown(max_length);
+    $('form').submit(function() {
+        return r = confirm("Are you sure you want to send this message?");
+        
+    })
 
  });
+ 
+ 
 var whenkeydown = function(max_length)
 {
     $("#message").unbind().keyup(function()
