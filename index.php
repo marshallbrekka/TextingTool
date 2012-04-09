@@ -10,12 +10,16 @@ if($_POST['numbers'] != null) {
         $singleEmail = join(',', $emails);
         $from = $_POST['from'];
         $mail = new Mail();
-        $mail->sendMail($from, $singleEmail, $_REQUEST['message']);
+        if($mail->sendMail($from, $singleEmail, $_REQUEST['message'])) {
+            echo '<p>Messages Sent</p>';
+        } else {
+            echo '<p>Failed for some unknown reason</p>';
+        }
         /*
         foreach($emails as $email) {
             
         }*/
-    echo '<p>Messages Sent</p>';
+    
     }
     
 }

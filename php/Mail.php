@@ -22,7 +22,7 @@ class Mail {
 
 		
 	
-		$ok = @mail($email_to, $email_subject, $message, $headers, "-f$email_from");
+		return @mail($email_to, $email_subject, $message, $headers, "-f$email_from");
 		
 	}
 	
