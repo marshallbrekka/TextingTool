@@ -1,6 +1,6 @@
-AuthUserFile /home/mbrekka/webapps/marshall_dev/calserve/.htpasswd
-AuthGroupFile /dev/null
-AuthName Texting 
-AuthType Basic
+#AuthUserFile /home/mbrekka/webapps/marshall_dev/calserve/.htpasswd
+#AuthGroupFile /dev/null
+#AuthName Texting 
+#AuthType Basic
 
-require user calserve
+#require user calserve
