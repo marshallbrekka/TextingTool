@@ -6,12 +6,18 @@ require 'php/Mail.php';
 $p = new NumberParser();
 if($_POST['numbers'] != null) {
     $emails = $p->buildEmails($_POST['numbers']);
-    $from = "KleinLieuForASUCSenate@gmail.com";
-    $mail = new Mail();
-    foreach($emails as $email) {
-        $mail->sendMail($from, $email, $_REQUEST['message']);
-    }
+    if(count($emails) > 0) {
+        $singleEmail = join(',', $emails);
+        $from = "KleinLieuForASUCSenate@gmail.com";
+        $mail = new Mail();
+        $mail->sendMail($from, $singleEmail, $_REQUEST['message']);
+        /*
+        foreach($emails as $email) {
+            
+        }*/
     echo '<p>Messages Sent</p>';
+    }
+    
 }
 
 
